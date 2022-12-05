@@ -9,14 +9,13 @@ require("mason-lspconfig").setup_handlers({
         require("lspconfig")[server_name].setup {}
     end,
     -- Next, you can provide targeted overrides for specific servers.
-    ['pylsp'] = function()
-        require 'lspconfig'.pylsp.setup {
+    ["pylsp"] = function ()
+        require("lspconfig").pylsp.setup {
             settings = {
                 pylsp = {
                     plugins = {
                         pycodestyle = {
-                            ignore = {'E127', 'E303', 'E501'},
-                            maxLineLength = 100
+                            enabled = false
                         },
                     },
                 },
