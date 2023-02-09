@@ -6,6 +6,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
+vim.opt.number = true
 
 require("core.plugins")
 require("core.theme")
@@ -17,3 +18,4 @@ require("configs.mason-lspconfig")
 require("configs.nvim-lspconfig")
 require("configs.nvim-cmp")
 require("configs.indent_blankline")
+-- require("configs.keybindings")
