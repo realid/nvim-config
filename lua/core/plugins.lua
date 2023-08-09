@@ -14,6 +14,8 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup({
     function()
         use {'wbthomason/packer.nvim'}
+        -- 提供额外的图标
+        use {'nvim-tree/nvim-web-devicons'}
         -- 符号列表
         use {'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'}
         use {'simrat39/symbols-outline.nvim'}
@@ -24,10 +26,10 @@ return require('packer').startup({
         -- 主题
         use {'morhetz/gruvbox'}
         -- 底栏
-        use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+        use {'nvim-lualine/lualine.nvim', requires = {'nvim-tree/nvim-web-devicons', opt = true}}
         -- 侧边栏
-        use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}, tag = 'nightly'}
-        use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+        use {'kyazdani42/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}}
+        use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
         -- 语法补全
         use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
         if packer_bootstrap then
