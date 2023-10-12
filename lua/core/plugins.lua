@@ -28,8 +28,19 @@ return require('packer').startup({
         -- 底栏
         use {'nvim-lualine/lualine.nvim', requires = {'nvim-tree/nvim-web-devicons', opt = true}}
         -- 侧边栏
-        use {'kyazdani42/nvim-tree.lua', requires = {'nvim-tree/nvim-web-devicons'}}
+        -- 快捷键提示
+        use {'folke/which-key.nvim',
+            config = function()
+                vim.o.timeout = true
+                vim.o.timeoutlen = 300
+                require('which-key').setup {
+                }
+            end
+        }
+        -- 顶栏
         use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+        -- 模糊查找
+        use {'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = { {'nvim-lua/plenary.nvim'} } }
         -- 语法补全
         use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
         if packer_bootstrap then
