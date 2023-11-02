@@ -39,6 +39,12 @@ return require('packer').startup({
         }
         -- 顶栏
         use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+        -- 注释
+        use {'numToStr/Comment.nvim', 
+            config = function()
+                require('Comment').setup()
+            end
+        }
         -- 模糊查找
         use {'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = { {'nvim-lua/plenary.nvim'} } }
         -- 语法补全
