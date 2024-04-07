@@ -17,8 +17,8 @@ return require('packer').startup({
         -- 提供额外的图标
         use {'nvim-tree/nvim-web-devicons'}
         -- 符号列表
-        use {'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'}
-        use {'simrat39/symbols-outline.nvim'}
+        -- use {'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim', 'neovim/nvim-lspconfig'}
+        -- use {'simrat39/symbols-outline.nvim'}
         -- 缩进线
         use {'lukas-reineke/indent-blankline.nvim'}
         -- 语法高亮
@@ -46,7 +46,7 @@ return require('packer').startup({
             end
         }
         -- 模糊查找
-        use {'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = { {'nvim-lua/plenary.nvim'} } }
+        -- use {'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = { {'nvim-lua/plenary.nvim'} } }
         -- 语法补全
         use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
         if packer_bootstrap then
